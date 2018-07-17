@@ -1,6 +1,8 @@
 # MiniConfig
 small and easy configuration tool for .net applications
 
+### Getting started
+
 ### 1. Install NuGet Package
 
 ```
