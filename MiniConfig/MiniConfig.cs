@@ -24,8 +24,6 @@ namespace MiniLibs
             _configName = configName;
 
             init();
-
-            map = new ExeConfigurationFileMap { ExeConfigFilename = _configName };
         }
 
         private void init()
@@ -35,11 +33,12 @@ namespace MiniLibs
                 File.AppendAllText(_configName, baseConfigSchema);
             }
 
-            configuration = ConfigurationManager.OpenMappedExeConfiguration(map, ConfigurationUserLevel.None);
+            loadConfigs();
         }
 
         private void loadConfigs()
         {
+            map = new ExeConfigurationFileMap { ExeConfigFilename = _configName };
             configuration = ConfigurationManager.OpenMappedExeConfiguration(map, ConfigurationUserLevel.None);
         }
 
@@ -79,7 +78,7 @@ namespace MiniLibs
                 configuration.AppSettings.Settings.Add(key, value);
             }
 
-            configuration.Save(ConfigurationSaveMode.Minimal);
+            configuration.Save(ConfigurationSaveMode.Full);
 
 
         }
