@@ -1,5 +1,5 @@
 # MiniConfig
-small and easy configuration tool for .net applications
+Small and easy configuration library for .Net Applications
 
 ### Getting started
 
@@ -39,7 +39,7 @@ if (config.TryGet("port", out int port)) // if config exist
     Console.Write(port);
 }
 ````
-if you don't have configurations at startup you don't need create `setting.conf`:
+If you don't have configurations at startup you don't need create `setting.conf`:
 
 ```c#
 var config = new MiniConfig();
