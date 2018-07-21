@@ -22,7 +22,7 @@ Install-Package miniconfig
 
 ### 3. Enable copy to bin folder
 
-Enable copy to bin folder for setting.conf
+Enable copy to bin folder for `setting.conf`
 
 ```csharp
 var config = new MiniConfig("setting.conf");
@@ -39,7 +39,7 @@ if (config.TryGet("port", out int port)) // if config exist
     Console.Write(port);
 }
 ````
-if you don't have configurations at startup you don't need create setting.conf:
+if you don't have configurations at startup you don't need create `setting.conf`:
 
 ```c#
 var config = new MiniConfig();
