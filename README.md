@@ -5,9 +5,7 @@ Small and easy configuration library for .Net Applications
 
 ### 1. Install NuGet Package
 
-```
-Install-Package miniconfig
-```
+[![NuGet version](https://img.shields.io/nuget/v/MiniConfig.svg)](https://www.nuget.org/packages/MiniConfig)
 
 ### 2. Create a sample setting.conf
 
